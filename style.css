@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+}
+
+.container{
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+}
+header{
+    background-color: aliceblue;
+    width: 100%;
+}
+.navbar{
+    height: 70px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand{
+    color: rgb(234, 0, 255);
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 8px;
+}
+
+.navbar-toggler{
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background: rgb(130, 248, 20);
+    cursor: pointer;
+    display: none;
+}
+.navbar-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-nav .nav-item{
+    list-style: none;
+    margin: 0 10px;
+}
+.navbar-nav .nav-item .nav-link{
+    text-decoration: none;
+    color: rgb(238, 64, 238);
+    font-weight: 600;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+.navbar-nav .nav-item .nav-link::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    width: 0;
+    background-color: aqua;
+    transition: 0.5s;
+}
+.navbar-nav .nav-item .nav-link:hover:after{
+    width: 100%;
+}
+
+
+@media screen and (max-width: 600px) {
+    .navbar-nav{
+        display: none;
+    }
+    .navbar-toggler{
+        display: block;
+    }
+    .navbar-nav.active{
+        display: block;
+        position: absolute;
+        top: 70px;
+        background-color: aliceblue;
+        width: 100%;
+        left: 0;
+        padding: 10px;
+    }
+    
+}
